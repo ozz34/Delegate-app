@@ -7,12 +7,12 @@
 
 import UIKit
 
+// MARK: - SecondViewControllerDelegate
 protocol SecondViewControllerDelegate {
     func getLabel(for text: String)
 }
 
 final class FirstViewController: UIViewController {
-    
     @IBOutlet var smileLabel: UILabel!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -22,8 +22,8 @@ final class FirstViewController: UIViewController {
     }
 }
 
+// MARK: - SecondViewControllerDelegate
 extension FirstViewController: SecondViewControllerDelegate {
-    
     func getLabel(for text: String) {
         smileLabel.text = text
     }
